@@ -1,0 +1,21 @@
+<!-- Details Panel (on click of a Contact Name)-->
+<div class="row">
+  <h3><a href="#/contacts">Go Back</a></h3>
+  <div class="panel">
+    <h3><span ng-bind="contactDetail.name"></span></h3>
+    <h2>{{contactDetail.$id}}</h2>
+    <ul>
+      <li><strong>Company</strong>: <span ng-bind="contactDetail.company"></span></li>
+      <li><strong>Email</strong>: <span ng-bind="contactDetail.email"></span></li>
+      <h5>Phone Numbers</h5>
+      <li><strong>Work</strong>: <span ng-bind="contactDetail.work_phone"></span></li>
+      <li><strong>Home</strong>: <span ng-bind="contactDetail.home_phone"></span></li>
+      <li><strong>Mobile</strong>: <span ng-bind="contactDetail.mobile_phone"></span></li>
+      <h5>Address</h5>
+      <li><strong><span ng-bind="contactDetail.street_address"></span></strong></li>
+      <li>
+        <span ng-bind="contactDetail.city"></span>, <span ng-bind="contactDetail.state"></span> <span ng-bind="contactDetail.zipcode"></span>
+      </li>
+    </ul>
+  </div>
+</div>

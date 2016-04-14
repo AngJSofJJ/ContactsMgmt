@@ -1,0 +1,40 @@
+<div class="row">
+
+
+  <div class="large-10 columns">
+
+    <!-- Appropriate Message to  be displayed after the respective CRUD operation-->
+    <div data-alert class="alert-box" ng-show="contactsShow.message"><span ng-bind="contactsShow.message"></span></div>
+
+    <div class="glyphicon-search">
+      <input type="text" ng-model="search" class="caption" placeholder="Enter Search Item"/>
+    </div>
+
+    <input type="hidden" id="contactsCount" name="contactsCount" value="{{contactsShow.contacts.length}}"/>
+    <h3> Contacts <span ng-bind="contactsShow.contacts.length"></span></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in contactsShow.contacts | filter:search">
+
+          <td nowrap><a id="detail" href="#/contacts/{{contact.$id}}"><span ng-bind="contact.name"></span></a></td>
+          <td nowrap><span ng-bind="contact.company"></span></td>
+          <td nowrap><span ng-bind="contact.email"></span></td>
+          <td nowrap><a id="edit" class="button tiny" href="#/contact/edit/{{contact.$id}}">Edit</a>
+            <a id="delete" class="button tiny alert" ng-click="contactsShow.removeContact(contact)">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="large-1 columns">
+    <a id="add" class="button large" href="#/contact/add">+</a>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<!-- ADD CONTACT FORM -->
+<form ng-submit="contactCreate.addFormSubmit()">
+  <h3>Add Contact</h3>
+  <div class="row"> <!-- 1st Row -->
+    <div class="large-6 columns">
+      <label>Name:
+        <input type="text" ng-model="contactCreate.name" placeholder="Contact Name"/>
+      </label>
+    </div>
+    <div class="large-6 columns">
+      <label>E-mail:
+        <input type="text" ng-model="contactCreate.email" placeholder="Contact Email"/>
+      </label>
+    </div>
+  </div>
+  <div class="row"> <!-- 2nd Row -->
+    <div class="large-6 columns">
+      <label>Company:
+        <input type="text" ng-model="contactCreate.company" placeholder="Company Name"/>
+      </label>
+    </div>
+    <div class="large-6 columns">
+      <label>Work Phone:
+        <input type="text" ng-model="contactCreate.work_phone" placeholder="Work Phone"/>
+      </label>
+    </div>
+  </div>
+
+  <div class="row"> <!-- 3rd Row -->
+    <div class="large-6 columns">
+      <label>Mobile Phone:
+        <input type="text" ng-model="contactCreate.mobile_phone" placeholder="Mobile Phone"/>
+      </label>
+    </div>
+    <div class="large-6 columns">
+      <label>Home Phone:
+        <input type="text" ng-model="contactCreate.home_phone" placeholder="Home Phone"/>
+      </label>
+    </div>
+  </div>
+  <div class="row"> <!-- 4th Row -->
+    <div class="large-6 columns">
+      <label>Street Address:
+        <input type="text" ng-model="contactCreate.street_address" placeholder="Street Address"/>
+      </label>
+    </div>
+    <div class="large-6 columns">
+      <label>City:
+        <input type="text" ng-model="contactCreate.city" placeholder="City"/>
+      </label>
+    </div>
+  </div>
+  <div class="row"> <!-- 5th Row -->
+    <div class="large-6 columns">
+      <label>State:
+        <input type="text" ng-model="contactCreate.state" placeholder="State" />
+      </label>
+    </div>
+    <div class="large-6 columns">
+      <label>Zip Code:
+        <input type="text" ng-model="contactCreate.zipcode" placeholder="Zip Code"/>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <input id="AddContact" type="submit" value="Add Contact" class="button"/>
+      <a id="GoBack" class="btn btn-block btn-primary" href="#/contacts">Cancel</a>
+    </div>
+  </div>
+
+</form>
